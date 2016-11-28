@@ -61,24 +61,28 @@ image_angle += rotate_inc;
 if ( y - (sprite_height * 0.5) &lt; 0 ) {
     if (vspeed &lt; 0) {
         vspeed *= -1;
+        instance_create(0,0,obj_shake);
     }
 }
 // bounce off the bottom "wall"
 if ( y + (sprite_height * 0.5) &gt; room_height ) {
     if (vspeed &gt; 0) {
         vspeed *= -1;
+        instance_create(0,0,obj_shake);
     }
 }
 // bounce off the left "wall"
 if ( x - (sprite_width * 0.5) &lt; 0 ) {
     if (hspeed &lt; 0) {
         hspeed *= -1;
+        instance_create(0,0,obj_shake);
     }
 }
 // bounce off the right "wall"
 if (x + (sprite_width * 0.5) &gt; room_width ) {
     if (hspeed &gt; 0) {
         hspeed *= -1;
+        instance_create(0,0,obj_shake);
     }
 }
 </string>

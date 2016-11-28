@@ -13,6 +13,7 @@
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_manager</object>
+    <object>objects\obj_shake</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_game</room>
