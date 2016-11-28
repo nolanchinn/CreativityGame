@@ -28,6 +28,7 @@
             <string>speed_inc = 0.6;
 speed_cap = 6;
 scale_factor = 1;
+rotate_inc = -2;
 
 image_xscale *= scale_factor;
 image_yscale *= scale_factor;
@@ -53,7 +54,10 @@ image_yscale *= scale_factor;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>// bounce off the top "wall"
+            <string>// rotate the sprite around
+image_angle += rotate_inc;
+
+// bounce off the top "wall"
 if ( y - (sprite_height * 0.5) &lt; 0 ) {
     if (vspeed &lt; 0) {
         vspeed *= -1;
