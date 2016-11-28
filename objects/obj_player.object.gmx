@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>speed_inc = 0.6;
 speed_cap = 6;
-scale_factor = 1;
+scale_factor = 3;
 rotate_inc = -2;
 
 image_xscale *= scale_factor;
