@@ -8,6 +8,30 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
+    <event eventtype="2" enumb="1">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>instance_create(irandom_range(0, 1280), irandom_range(0, 720), obj_debris); //spawn the object
+alarm[1] = 60; //set the alarm to occur again in 2
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="7" enumb="2">
       <action>
         <libid>1</libid>
@@ -26,6 +50,10 @@
           <argument>
             <kind>1</kind>
             <string>display_reset(0, true);
+
+// set up enemy spawning
+alarm[1]=120; // 2 seconds (60 frames per second)
+randomize();
 </string>
           </argument>
         </arguments>

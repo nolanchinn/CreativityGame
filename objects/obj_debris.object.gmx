@@ -26,10 +26,11 @@
           <argument>
             <kind>1</kind>
             <string>scale_factor = 3;
+scale_inc = 0.1;
 rotate_inc = 2;
 
-image_xscale *= scale_factor;
-image_yscale *= scale_factor;
+image_xscale = 0.1;
+image_yscale = 0.1;
 </string>
           </argument>
         </arguments>
@@ -54,6 +55,45 @@ image_yscale *= scale_factor;
             <kind>1</kind>
             <string>// rotate the sprite
 image_angle += rotate_inc;
+
+// increase sprite size as it approaches
+image_xscale += scale_inc;
+image_yscale += scale_inc;
+
+// check if sprite is "over camera"
+if(image_xscale &gt;= 6) {
+    instance_destroy();
+}
+
+if(image_xscale &gt;= 3) {
+    depth = -999;
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="4" ename="obj_player">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>if(obj_player.scale_factor == image_xscale) {
+    instance_destroy();
+}
+
 </string>
           </argument>
         </arguments>
