@@ -143,6 +143,12 @@ if (player_health == 0) {
 rotate_inc *= -1;
 
 instance_create(0,0,obj_shake);
+if(image_xscale == obj_debris.image_xscale) {   
+    image_xscale = 20;
+    image_yscale = 20;
+    depth = -999;
+}
+
 </string>
           </argument>
         </arguments>
