@@ -24,6 +24,10 @@
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\fnt_game</font>
+    <font>fonts\fnt_title</font>
+  </fonts>
   <objects name="objects">
     <object>objects\obj_player</object>
     <object>objects\obj_manager</object>
@@ -31,9 +35,16 @@
     <object>objects\obj_debris</object>
     <object>objects\obj_ring</object>
     <object>objects\obj_DJ</object>
+    <object>objects\obj_score_room</object>
+    <object>objects\obj_score</object>
+    <object>objects\obj_globals</object>
+    <object>objects\obj_title</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_title</room>
+    <room>rooms\rm_setup</room>
     <room>rooms\rm_game</room>
+    <room>rooms\rm_score</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
